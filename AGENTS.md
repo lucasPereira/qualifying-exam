@@ -1,22 +1,22 @@
-# Qualification document guidance
+# Qualifying exam document guidance
 
-This file gives agents the context needed to edit, build, and review the doctorate qualification document at UFSC. The manuscript is a LaTeX project written in Brazilian Portuguese and formatted with the UFSC thesis template (`ufsc-thesis-rn46-2019`).
+This file gives agents the context needed to edit, build, and review the doctorate qualifying exam document at UFSC. The manuscript is a LaTeX project written in Brazilian Portuguese and formatted with the UFSC thesis template (`ufsc-thesis-rn46-2019`).
 
 ## Project scope
 
-The project is a qualification manuscript, not an application codebase. The main entry point is `qualification.tex`. Formatting rules live in `template-guide.pdf`.
+The project is a qualifying exam manuscript, not an application codebase. The main entry point is `qualifying-exam.tex`. Formatting rules live in `template-guide.pdf`.
 
 ## Repository layout
 
 These paths are the usual edit targets. Class files are template infrastructure; change them only when the build or the user requires it.
 
-- `qualification.tex` — document root.
-- `sections/*.tex` — pre-textual sections included with `\input{}` from `qualification.tex`.
-- `chapters/*.tex` — body text included with `\input{}` from `qualification.tex`.
-- `qualification.bib` — references cited from the manuscript.
+- `qualifying-exam.tex` — document root.
+- `sections/*.tex` — pre-textual sections included with `\input{}` from `qualifying-exam.tex`.
+- `chapters/*.tex` — body text included with `\input{}` from `qualifying-exam.tex`.
+- `qualifying-exam.bib` — references cited from the manuscript.
 - `ufsc-thesis-rn46-2019.cls`, `template-guide.pdf` — UFSC template.
 
-**One chapter per file.** Add new chapters as separate `.tex` files and `\input{}` them from `qualification.tex`.
+**One chapter per file.** Add new chapters as separate `.tex` files and `\input{}` them from `qualifying-exam.tex`.
 
 **Cite from the bibliography file.** Do not hardcode bibliography entries in chapter files.
 
@@ -26,10 +26,10 @@ These paths are the usual edit targets. Class files are template infrastructure;
 
 ## Build
 
-The PDF is the document the user reads. After every change to `.tex`, `.bib`, listings, or other included sources, recompile so `qualification.pdf` matches the sources.
+The PDF is the document the user reads. After every change to `.tex`, `.bib`, listings, or other included sources, recompile so `qualifying-exam.pdf` matches the sources.
 
 ```bash
-latexmk -pdf qualification.tex
+latexmk -pdf qualifying-exam.tex
 ```
 
 Check the PDF for unresolved references, missing citations, and serious overfull boxes.
