@@ -41,7 +41,7 @@ Além da revisão exploratória, foi realizado um estudo sistemático para ident
 
 Nas duas rodadas foram utilizadas as bases ACM Digital Library, IEEE Xplore e Scopus. A expressão de busca foi \texttt{(testing) AND (refactoring OR reuse)} \texttt{AND (automatic OR tool)}, adaptada a cada base. As restrições foram: (1) pesquisar em títulos, resumos e palavras-chave; (2) apenas trabalhos da área de Ciência da Computação; (3) apenas publicações em periódicos e conferências; e (4) apenas trabalhos em língua inglesa. A primeira rodada encontrou 933 publicações e segunda encontrou 376 publicações. No total, as duas buscas retornaram 1.309 publicações: 167 da ACM Digital Library, 191 da IEEE Xplore e 951 da Scopus.
 
-A seleção foi dividida em três etapas, aplicadas da mesma forma nas duas rodadas e consolidadas na Figura~\ref{figure:systematic-study}. Na primeira etapa, foram lidos títulos e resumos, e para cada publicação respondeu-se à pergunta: a publicação aborda refatoração ou reuso de casos de teste? O objetivo foi eliminar trabalhos sem relação direta com o tema, uma vez que os termos da expressão de busca podem aparecer em contextos distintos. A pergunta foi respondida com ``Sim'', ``Não'' ou ``Incerto''. Ao todo, 1.149 publicações receberam ``Não'' e foram descartadas; 56 receberam ``Sim'' e seguiram diretamente para a última etapa; e 104 receberam ``Incerto'' e foram avaliadas na segunda etapa.
+A seleção foi dividida em três etapas, aplicadas da mesma forma nas duas rodadas e consolidadas na Figura~\ref{figure:systematic-study-screening}. Na primeira etapa, foram lidos títulos e resumos, e para cada publicação respondeu-se à pergunta: a publicação aborda refatoração ou reuso de casos de teste? O objetivo foi eliminar trabalhos sem relação direta com o tema, uma vez que os termos da expressão de busca podem aparecer em contextos distintos. A pergunta foi respondida com ``Sim'', ``Não'' ou ``Incerto''. Ao todo, 1.149 publicações receberam ``Não'' e foram descartadas; 56 receberam ``Sim'' e seguiram diretamente para a última etapa; e 104 receberam ``Incerto'' e foram avaliadas na segunda etapa.
 
 Na segunda etapa, as 104 publicações incertas foram reavaliadas pela leitura da introdução e da conclusão. A mesma pergunta foi repetida, agora apenas com ``Sim'' ou ``Não''. Dessas publicações, 100 receberam ``Não'' e foram descartadas, enquanto 4 receberam ``Sim'' e seguiram para a terceira etapa. Assim, 60 publicações foram lidas por completo, 56 provenientes diretamente da primeira etapa e 4 provenientes da segunda.
 
@@ -49,9 +49,9 @@ Na terceira etapa, respondeu-se à pergunta: a publicação trata de uma abordag
 
 \begin{figure}[htb]
 	\centering
-	\includegraphics[width=0.7\textwidth]{figures/systematic-study.png}
+	\includegraphics[width=0.7\textwidth]{figures/systematic-study-screening.png}
 	\caption{Etapas consolidadas de filtragem das duas rodadas do estudo sistemático, das buscas iniciais até as 17 publicações incluídas}
-	\label{figure:systematic-study}
+	\label{figure:systematic-study-screening}
 	\fonte{Elaborado pelo autor.}
 \end{figure}
 

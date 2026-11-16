@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1150" height="720" viewBox="0 0 1150 720" role="img" aria-labelledby="title description">
+  <title id="title">Orquestrador das etapas implementadas pelo Róża</title>
+  <desc id="description">Método Java que encadeia as interfaces de carregamento, análise sintática, decomposição e medição. Cada etapa possui uma cor distinta.</desc>
+  <defs>
+    <clipPath id="window">
+      <rect width="1150" height="720" rx="13" ry="13"/>
+    </clipPath>
+    <style>
+      .code { font-family: 'JetBrains Mono', monospace; font-size: 26px; font-weight: 500; fill: #A9B7C6; white-space: pre; }
+      .number { font-family: 'JetBrains Mono', monospace; font-size: 26px; fill: #5E6A78; text-anchor: end; }
+      .keyword { fill: #FFC66D; }
+      .type { fill: #9ECBE3; }
+      .method { fill: #D6E2EF; }
+      .punctuation { fill: #A9B7C6; }
+    </style>
+  </defs>
+
+  <g clip-path="url(#window)">
+    <rect width="1150" height="720" fill="#12171E"/>
+    <rect width="1150" height="50" fill="#0E2238"/>
+
+    <!-- Etapa 1: carregamento -->
+    <rect x="0" y="318" width="1150" height="41" fill="#164A70" fill-opacity="0.78"/>
+    <!-- Etapa 2: análise sintática -->
+    <rect x="0" y="359" width="1150" height="82" fill="#1C5A42" fill-opacity="0.78"/>
+    <!-- Etapa 3: decomposição -->
+    <rect x="0" y="441" width="1150" height="82" fill="#54386E" fill-opacity="0.78"/>
+    <!-- Etapa 4: medição -->
+    <rect x="0" y="523" width="1150" height="82" fill="#6B491F" fill-opacity="0.78"/>
+
+    <circle cx="18" cy="25" r="6" fill="#FF5F57"/>
+    <circle cx="37" cy="25" r="6" fill="#FEBC2E"/>
+    <circle cx="56" cy="25" r="6" fill="#28C840"/>
+    <text x="74" y="31" fill="#D5DEE8" font-family="Helvetica, Arial, sans-serif" font-size="16">ModernRozaUi.java</text>
+
+    <g class="number">
+      <text x="64" y="98">1</text>
+      <text x="64" y="139">2</text>
+      <text x="64" y="180">3</text>
+      <text x="64" y="221">4</text>
+      <text x="64" y="262">5</text>
+      <text x="64" y="303">6</text>
+      <text x="64" y="344">7</text>
+      <text x="64" y="385">8</text>
+      <text x="64" y="426">9</text>
+      <text x="64" y="467">10</text>
+      <text x="64" y="508">11</text>
+      <text x="64" y="549">12</text>
+      <text x="64" y="590">13</text>
+      <text x="64" y="631">14</text>
+      <text x="64" y="672">15</text>
+    </g>
+
+    <g class="code" xml:space="preserve">
+      <text x="78" y="98"><tspan class="keyword">private</tspan><tspan> </tspan><tspan class="type">TestCaseSimilarityMatrix</tspan><tspan> </tspan><tspan class="method">execute</tspan><tspan class="punctuation">(</tspan></text>
+      <text x="142" y="139"><tspan class="type">CodeFileLoader</tspan><tspan> loader</tspan><tspan class="punctuation">,</tspan></text>
+      <text x="142" y="180"><tspan class="type">TestClassParser</tspan><tspan> parser</tspan><tspan class="punctuation">,</tspan></text>
+      <text x="142" y="221"><tspan class="type">TestCaseDecomposer</tspan><tspan> decomposer</tspan><tspan class="punctuation">,</tspan></text>
+      <text x="142" y="262"><tspan class="type">TestCaseSimilarityMeasurer</tspan><tspan> measurer</tspan></text>
+      <text x="78" y="303"><tspan class="punctuation">) {</tspan></text>
+
+      <text x="142" y="344"><tspan class="type">LoadedCodeFiles</tspan><tspan> loadedCodeFiles </tspan><tspan class="punctuation">= </tspan><tspan>loader</tspan><tspan class="punctuation">.</tspan><tspan class="method">load</tspan><tspan class="punctuation">();</tspan></text>
+
+      <text x="142" y="385"><tspan class="type">ParsedTestClasses</tspan><tspan> parsedTestClasses </tspan><tspan class="punctuation">=</tspan></text>
+      <text x="206" y="426"><tspan>parser</tspan><tspan class="punctuation">.</tspan><tspan class="method">parse</tspan><tspan class="punctuation">(</tspan><tspan>loadedCodeFiles</tspan><tspan class="punctuation">);</tspan></text>
+
+      <text x="142" y="467"><tspan class="type">DecomposedTestCases</tspan><tspan> decomposedTestCases </tspan><tspan class="punctuation">=</tspan></text>
+      <text x="206" y="508"><tspan>decomposer</tspan><tspan class="punctuation">.</tspan><tspan class="method">decompose</tspan><tspan class="punctuation">(</tspan><tspan>parsedTestClasses</tspan><tspan class="punctuation">);</tspan></text>
+
+      <text x="142" y="549"><tspan class="type">TestCaseSimilarityMatrix</tspan><tspan> matrix </tspan><tspan class="punctuation">=</tspan></text>
+      <text x="206" y="590"><tspan>measurer</tspan><tspan class="punctuation">.</tspan><tspan class="method">measure</tspan><tspan class="punctuation">(</tspan><tspan>decomposedTestCases</tspan><tspan class="punctuation">);</tspan></text>
+
+      <text x="142" y="631"><tspan class="keyword">return</tspan><tspan> matrix</tspan><tspan class="punctuation">;</tspan></text>
+      <text x="78" y="672"><tspan class="punctuation">}</tspan></text>
+    </g>
+  </g>
+  <rect x="0.5" y="0.5" width="1149" height="719" rx="12.5" ry="12.5" fill="none" stroke="#203047"/>
+</svg>

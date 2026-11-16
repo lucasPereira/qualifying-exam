@@ -11,7 +11,7 @@ O objetivo do experimento consiste em comparar métricas de similaridade quanto 
 
 O experimento divide-se em cinco fases, executadas em sequência: (1) seleção da fonte de dados; (2) classificação manual e construção da matriz de controle; (3) geração de variantes de configuração para cada métrica; (4) execução de cada variante e obtenção das matrizes de similaridade; e (5) coleta dos resultados por meio de curvas médias de precisão e recaptação (\textit{precision/recall}). As fontes, os \textit{scripts} e as instruções de replicação encontram-se no repositório público do Róża\footnote{\url{https://github.com/lucasPereira/roza/tree/master/experiment-results}}\footnote{\url{https://github.com/lucasPereira/roza/tree/master/src/expt}}.
 
-A \autoref{figure:experiment-phases} sintetiza esse fluxo e explicita os artefatos transferidos entre as fases. Na primeira fase, a suíte de testes de aceitação é filtrada segundo critérios de compatibilidade com o processamento do Róża, resultando no conjunto de 46 testes que alimenta as etapas seguintes.
+A \autoref{figure:experiment-overview} sintetiza esse fluxo e explicita os artefatos transferidos entre as fases. Na primeira fase, a suíte de testes de aceitação é filtrada segundo critérios de compatibilidade com o processamento do Róża, resultando no conjunto de 46 testes que alimenta as etapas seguintes.
 
 Na segunda fase, os autores classificam manualmente cada um dos 1035 pares distintos formados por esses testes e constroem a matriz de controle binária, na qual cada célula indica se a refatoração por configuração implícita seria adequada (1) ou inadequada (0); a partir dessa matriz, derivam-se os conjuntos de testes compatíveis que servirão de referência na avaliação.
 
@@ -23,9 +23,9 @@ Na quinta fase, confrontam-se as ordenações produzidas por cada variante com o
 
 \begin{figure}[htb]
 	\centering
-	\includegraphics[width=0.75\textwidth]{figures/experiment-phases.pdf}
+	\includegraphics[width=0.75\textwidth]{figures/experiment-overview.pdf}
 	\caption{Fases do experimento de avaliação das métricas de similaridade}
-	\label{figure:experiment-phases}
+	\label{figure:experiment-overview}
 	\fonte{Elaborado pelo autor.}
 \end{figure}
 
@@ -144,7 +144,7 @@ A Tabela~\ref{table:average-similarity-degrees} resume os graus médios de simil
 
 \section{Discussão dos resultados}
 
-A análise qualitativa dos graus atribuídos por LCS, JPlag e Deckard revela um padrão comum de falsos positivos: trechos comuns situados fora do prefixo inicial das configurações de acessórios elevam o grau de similaridade mesmo quando a configuração implícita não pode extrair esse código com segurança, conforme ilustrado na \autoref{figure:lccss-lcs-comparison}. A LCS, em particular, atribui graus elevados quando o final das configurações coincide, embora o início diverja. JPlag e Deckard, por sua vez, podem atribuir graus baixos a pares cujo prefixo inicial é idêntico e que foram classificados como compatíveis, aumentando falsos negativos e prejudicando a recaptação.
+A análise qualitativa dos graus atribuídos por LCS, JPlag e Deckard revela um padrão comum de falsos positivos: trechos comuns situados fora do prefixo inicial das configurações de acessórios elevam o grau de similaridade mesmo quando a configuração implícita não pode extrair esse código com segurança, conforme ilustrado na \autoref{figure:lcs-lccss-extraction}. A LCS, em particular, atribui graus elevados quando o final das configurações coincide, embora o início diverja. JPlag e Deckard, por sua vez, podem atribuir graus baixos a pares cujo prefixo inicial é idêntico e que foram classificados como compatíveis, aumentando falsos negativos e prejudicando a recaptação.
 
 LCCSS e Simian obtiveram desempenho equivalente nas curvas de precisão e recaptação. A diferença relevante para o \textit{pipeline} reside na calibração: Simian exige a escolha do limiar de linhas adequado ao projeto (no experimento, a oitava configuração testada produziu o melhor resultado), enquanto a LCCSS opera sem parâmetros e percorre as sequências de comandos em tempo linear até a primeira divergência. Assim, a LCCSS oferece critério de similaridade alinhado à restrição de prefixo contíguo da configuração implícita sem depender de ajuste por projeto.
 
